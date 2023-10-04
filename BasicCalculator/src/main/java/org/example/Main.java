@@ -14,20 +14,20 @@ public class Main {
         Float secondNumber = scanner.nextFloat();
         if (Answer.equalsIgnoreCase("A")) {
             Float Sum1 = firstNumber + secondNumber;
-            System.out.println(Sum1+"f");
+            System.out.println(Sum1);
         }
         if (Answer.equalsIgnoreCase("S")) {
             Float Sum2 = firstNumber - secondNumber;
-            System.out.println(Sum2+"f");
+            System.out.println(Sum2);
         }
         if (Answer.equalsIgnoreCase("M")) {
             Float Sum3 = firstNumber * secondNumber;
-            System.out.println(Sum3 + "f");
+            System.out.println(Sum3);
         }
 
         if (Answer.equalsIgnoreCase("D")) {
             Float Sum4 = firstNumber / secondNumber;
-            System.out.println(Sum4+ "f");
+            System.out.println(Sum4);
         }
     }
 }
