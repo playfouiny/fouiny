@@ -29,5 +29,8 @@ public class Main {
             Float Sum4 = firstNumber / secondNumber;
             System.out.println(Sum4);
         }
+        else{
+            System.out.println("pick another option");
+        }
     }
 }
