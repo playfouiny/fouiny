@@ -17,6 +17,6 @@ public class calculator3 {
         System.out.printf("the present value of your annuity is %.2f $ ", PresentValue);
     }
 
-    PV = PMT × [(1 - (1 + r)^(-n)) / r]
+
 
 }
