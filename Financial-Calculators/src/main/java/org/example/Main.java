@@ -52,13 +52,4 @@ public class Main {
             System.out.printf("please enter valid entry");
         }
     }
-
-
-
-
-
-
-
-
-
-    }
+}
