@@ -18,8 +18,10 @@ public class Main {
             double LoanLength = length * 12;
             double Monthlyrate = ((Annualrates / 12) / 100);
             double MonthlyPaments = (Loan * Monthlyrate) * Math.pow(1 + Monthlyrate, LoanLength) / (Math.pow(1 + Monthlyrate, LoanLength) - 1);
-            double InterestRates = ((MonthlyPaments * LoanLength) - Loan);
+            Double TotMonthlyPayments = MonthlyPaments * LoanLength;
+            double InterestRates = TotMonthlyPayments - Loan;
             System.out.printf("your monthly payments will be %.2f $ ", MonthlyPaments);
+            System.out.printf("your total payment is %.2f $ ", TotMonthlyPayments);
             System.out.printf(" and your total interest rate is %.2f $", InterestRates);
         }
         else if (Answer.equalsIgnoreCase("B")){

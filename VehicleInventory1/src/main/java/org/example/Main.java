@@ -12,42 +12,37 @@ public class Main {
         vehicle[3] = new Vehicle(101124, "Honda Civic", "White", 70000, 7500);
         vehicle[4] = new Vehicle(101125, "Subaru Outback", "Green", 55000, 14500);
         vehicle[5] = new Vehicle(101126, "Jeep Wrangler", "Yellow", 30000, 16000);
-       while (true) {
-
-           System.out.println("What do you want to do?");
-           System.out.println("1 - List all vehicles");
-           System.out.println("2 - Search by make/model");
-           System.out.println("3 - Search by price range");
-           System.out.println("4 - Search by color");
-           System.out.println("5 - Add a vehicle");
-           System.out.println("6 - Quit");
-
-           System.out.println("Enter 1, 2, 3, 4, 5, or 6: ");
-           int choice = scanner.nextInt();
-           switch (choice) {
-               case 1:
-                   displayVehicleList(vehicle);
-                   break;
-               case 2:
-                   searchByMake(vehicle);
-                   break;
-               case 3:
-                   searchByPrice(vehicle);
-                   break;
-               case 4:
-                   searchByColor(vehicle);
-                   break;
-               case 5:
-                   AddVehicle(vehicle);
-                   break;
-               case 6:
-                   System.out.println("Have a good day.");
-                   System.exit(0);
-                   break;
-               default:
-                   System.out.println("Enter 1,2,3,4,5, or 6");
-           }
-       }
+        System.out.println("What do you want to do?");
+        System.out.println("1 - List all vehicles");
+        System.out.println("2 - Search by make/model");
+        System.out.println("3 - Search by price range");
+        System.out.println("4 - Search by color");
+        System.out.println("5 - Add a vehicle");
+        System.out.println("6 - Quit");
+        System.out.println("Enter 1, 2, 3, 4, 5, or 6: ");
+        int choice = scanner.nextInt();
+        switch (choice) {
+            case 1:
+                displayVehicleList(vehicle);
+                break;
+            case 2:
+                searchByMake(vehicle);
+                break;
+            case 3:
+                searchByPrice(vehicle);
+                break;
+            case 4:
+                searchByColor(vehicle);
+                break;
+            case 5:
+                AddVehicle(vehicle);
+                break;
+            case 6:
+                System.out.println("Have a good day.");
+                break;
+            default:
+                System.out.println("Enter 1,2,3,4,5, or 6");
+        }
     }
 
     public static void displayVehicleList(Vehicle[] vehicles) {
@@ -104,13 +99,20 @@ public class Main {
                 done = true;
             }
         }
-        if (!done) {
-            System.out.println("not in inventory");
+            if (!done) {
+                System.out.println("not in inventory");
         }
     }
-    public static void AddVehicle(Vehicle[] vehicles) {
+    public static void AddVehicle(Vehicle[] vehicle) {
         Scanner scanner = new Scanner(System.in);
-
+        Vehicle[] vehicles = new Vehicle[20];
+        vehicles[0] = new Vehicle(101121, "Ford Explorer", "Red", 45000, 13500);
+        vehicles[1] = new Vehicle(101122, "Toyota Camry", "Blue", 60000, 11000);
+        vehicles[2] = new Vehicle(101123, "Chevrolet Malibu", "Black", 50000, 700);
+        vehicles[3] = new Vehicle(101124, "Honda Civic", "White", 70000, 7500);
+        vehicles[4] = new Vehicle(101125, "Subaru Outback", "Green", 55000, 14500);
+        vehicles[5] = new Vehicle(101126, "Jeep Wrangler", "Yellow", 30000, 16000);
+        int newIndex = 0;
         System.out.print("Enter vehicle ID: ");
         int vehicleId = scanner.nextInt();
         scanner.nextLine();
@@ -122,19 +124,11 @@ public class Main {
         int odometerReading = scanner.nextInt();
         System.out.print("Enter price: ");
         double price = scanner.nextDouble();
-
-        for (Vehicle library: vehicles) {
-            if (library == null) {
-                library=new Vehicle(vehicleId,makeModel,color,odometerReading,price );
-                System.out.println("vehicle succeffully added!");
+        vehicles[newIndex] = new Vehicle(vehicleId, makeModel, color, odometerReading, price);
+        for (Vehicle newvehicle : vehicles) {
+            if (newvehicle != null) {
+                System.out.printf("ID: %d, Make/Model: %s, Color: %s, Odometer: %d, Price: %.2f%n", newvehicle.getVehicleId(), newvehicle.getMakeModel(), newvehicle.getColor(), newvehicle.getOdometerReading(), newvehicle.getPrice());
             }
         }
-        /*if (vehicle!= null){
-            System.out.println("no space");*/
-
-          /*  if (newvehicle != null) {
-                System.out.printf("ID: %d, Make/Model: %s, Color: %s, Odometer: %d, Price: %.0f%n", newvehicle.getVehicleId(), newvehicle.getMakeModel(), newvehicle.getColor(), newvehicle.getOdometerReading(), newvehicle.getPrice());
-            }
-        }*/
     }
 }
