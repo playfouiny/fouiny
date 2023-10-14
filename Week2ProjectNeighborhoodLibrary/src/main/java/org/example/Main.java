@@ -30,7 +30,7 @@ public class Main {
 
         while (true) {
             System.out.println("welcome to your Neighborhood Library");
-            System.out.println("please select the following: 1 to check out books, 2 to exit out, 3 to check books that are checked out");
+            System.out.println("please select the following: 1 to check out books, 2 to exit out, 3 to check books that are checked out or not");
             int Choice = scanner.nextInt();
 
             switch (Choice) {
@@ -43,6 +43,7 @@ public class Main {
                     break;
                 case 3:
                     ShowCheckedOut(library);
+                    break;
 
             }
         }
