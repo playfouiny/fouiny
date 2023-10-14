@@ -76,7 +76,7 @@ public class Main {
                     System.out.println("Invalid Book ID or the book is not checked out.");
                 }
             } else if (choice.equalsIgnoreCase("B")) {
-                System.out.println("Returning to home screen");
+                System.out.println("Now returning to home screen");
                 return;
             } else {
                 System.out.println("Invalid input.");
