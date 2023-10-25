@@ -5,6 +5,7 @@ import java.util.Scanner;
 /*
 First some small stylistic things. Properties and method names should be camel case.
 So like ShowCheckedOutBooks should be showCheckedOutBooks
+I do this too so it's no biggie
 When displaying books that are checked out, you may want to display ONLY the books that
 are checked out. That way there is less info on the screen.
 I was able to check in a book that wasn't checked out, but it wouldn't cause a bug
