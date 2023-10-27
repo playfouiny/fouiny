@@ -1,7 +1,9 @@
 package org.example;
 
 public class Book {
+    //Small quibble, property names are camel case so they begin with lower case letters
     public int ID;
+    //I would make ISBN a string since you are never going to do math with it
     public int ISBN;
     public String title;
     public boolean ischeckedOut;
@@ -17,7 +19,15 @@ public class Book {
 
     }
 
-
+    //You could do the constructor like this for less typing since you know in the beginning it won't be checked out
+    //and it's not checked out to anyone
+    public Book(int id, int isbn, String title) {
+        this.ID = id;
+        this.ISBN = isbn;
+        this.title = title;
+        this.ischeckedOut = false;
+        this.CheckedOutTo = "";
+    }
 
 
     public int getID() {

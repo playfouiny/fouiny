@@ -2,12 +2,23 @@ package org.example;
 
 import java.util.Scanner;
 
+/*
+First some small stylistic things. Properties and method names should be camel case.
+So like ShowCheckedOutBooks should be showCheckedOutBooks
+I do this too so it's no biggie
+When displaying books that are checked out, you may want to display ONLY the books that
+are checked out. That way there is less info on the screen.
+I was able to check in a book that wasn't checked out, but it wouldn't cause a bug
+It just needs to give a message saying "That book has not been checked out."
+ */
 public class Main {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         Book[] library = new Book[20];
 
-        library[0] = new Book(1235, 3265, "Building Cars", false, "");
+        //The constructor makes for less typing since you know all the books are not checked out and are not checked out to anyone
+        //in the beginning
+        library[0] = new Book(1235, 3265, "Building Cars");
         library[1] = new Book(1, 9780061, "To Kill a Mockingbird", false, "");
         library[2] = new Book(2, 9724935, "1984", false, "");
         library[3] = new Book(3, 41439563, "Pride and Prejudice", false, "");
@@ -47,6 +58,8 @@ public class Main {
             }
         }
     }
+
+//Good that you broke this down into methods
     public static void ShowCheckedOut(Book[] inventory) {
         Scanner scanner = new Scanner(System.in);
         boolean isCheckedOut = false;
