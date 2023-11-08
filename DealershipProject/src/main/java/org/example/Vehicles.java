@@ -1,5 +1,7 @@
 package org.example;
 
+//Small quibble. The name of the class should be singular (Vehicle)
+
 public class Vehicles {
     private int vin;
     private int year;
