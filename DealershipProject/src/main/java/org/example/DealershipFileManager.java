@@ -7,14 +7,18 @@ import java.util.Scanner;
 
 public class DealershipFileManager {
 
+    //This method would be a good candidate to be static
     public Dealership getDealership() {
+        //Why start off with a null dealership?
         Dealership dealership = null;
+        //The dealership has the inventory, no?
         ArrayList<Vehicles> inventory = new ArrayList<>();
         try {
             FileInputStream fis = new FileInputStream("src/main/resources/Inventory.csv");
             Scanner scanner = new Scanner(fis);
             scanner.nextLine();
             dealership = new Dealership("Steeven Motor", "123 address", "123-4567");
+            //Isn't the inventory blank? You haven't added anything to it yet.
             dealership.setInventory(inventory);
             while (scanner.hasNextLine()) {
                 String line = scanner.nextLine();
@@ -45,6 +49,7 @@ public class DealershipFileManager {
             System.out.println("Error occurred while saving vehicle data: " + e.getMessage());
         }
     }
+    //nice use of buffered reader
     void removeVehicleFromFile(int vinToRemove) {
         List<Vehicles> updatedInventory = new ArrayList<>();
         try (BufferedReader reader = new BufferedReader(new FileReader("src/main/resources/Inventory.csv"))) {

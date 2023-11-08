@@ -4,6 +4,8 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Scanner;
 
+//You do an excellent job at defensive coding. You really make sure that the
+//user is giving you the input you expect.
 public class UserInterface {
 
     private Scanner scanner;
@@ -244,6 +246,7 @@ public class UserInterface {
             try {
                 System.out.println("Enter VIN: ");
                 vin = Integer.parseInt(scanner.nextLine());
+                //Regex? Fancy! Show off :P
                 if (String.valueOf(vin).matches("\\d{4}")) {
                     break;
                 } else {

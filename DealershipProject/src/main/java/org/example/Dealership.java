@@ -11,6 +11,7 @@ public class Dealership {
     private String phone;
 
     private ArrayList<Vehicles> inventory;
+    //getters and setters should go further down in the file
     public ArrayList<Vehicles> getInventory() {
         return inventory;
     }
