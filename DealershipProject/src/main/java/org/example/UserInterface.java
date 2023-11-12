@@ -428,18 +428,7 @@ public class UserInterface {
             System.out.println("Enter the email of the customer:");
             String customerEmail = scanner.nextLine();
             String contractsFilePath = "src/main/resources/Contracts.csv";
-            SalesContract salesContract = new SalesContract(
-                    vehicleToSell.getVin(),
-                    vehicleToSell.getYear(),
-                    vehicleToSell.getMake(),
-                    vehicleToSell.getModel(),
-                    vehicleToSell.getVehicleType(),
-                    vehicleToSell.getColor(),
-                    vehicleToSell.getOdometer(),
-                    vehicleToSell.getPrice(),
-                    dayOfSale,
-                    customerName,
-                    customerEmail);
+            SalesContract salesContract = new SalesContract(vehicleToSell.getVin(), vehicleToSell.getYear(), vehicleToSell.getMake(), vehicleToSell.getModel(), vehicleToSell.getVehicleType(), vehicleToSell.getColor(), vehicleToSell.getOdometer(), vehicleToSell.getPrice(), dayOfSale, customerName, customerEmail);
             List<SalesContract> salesContractsList = new ArrayList<>();
             salesContractsList.add(salesContract);
             ContractFileManager.saveContractsToFile(salesContractsList, contractsFilePath, true);
