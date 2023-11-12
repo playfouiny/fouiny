@@ -5,16 +5,14 @@ import java.util.List;
 import java.util.Scanner;
 
 public class UserInterface {
-
     private Scanner scanner;
-
     private Dealership dealership;
     public ArrayList<Vehicles> inventory;
 
     public UserInterface() {
+        this.scanner = new Scanner(System.in);  // Initialize the scanner object
         init();
     }
-
     private void init() {
         DealershipFileManager manager = new DealershipFileManager();
         this.dealership = manager.getDealership();
@@ -22,7 +20,6 @@ public class UserInterface {
     }
     public void display() {
         init();
-        /*try{*/
         Scanner scanner = new Scanner(System.in);
         while (true) {
             try {
@@ -35,6 +32,7 @@ public class UserInterface {
                 System.out.println("7. Get all vehicles");
                 System.out.println("8. Add a vehicle");
                 System.out.println("9. Remove a vehicle");
+                System.out.println("10. SELL/LEASE A VEHICLE");
                 System.out.println("0. Exit");
                 int choice = scanner.nextInt();
                 switch (choice) {
@@ -65,6 +63,9 @@ public class UserInterface {
                     case 9:
                         processRemoveVehicleRequest();
                         break;
+                    case 10:
+                        processSellOrLeaseRequest();
+                        break;
                     case 0:
                         System.out.println("Exiting...");
                         System.exit(0);
@@ -79,9 +80,6 @@ public class UserInterface {
                 scanner.nextLine();
             }
         }
-        /*}catch (Exception ex){
-        System.out.println("error"+ ex.getMessage());
-    }*/
     }
     private void displayVehicles(List<Vehicles> vehicles) {
         for (Vehicles vehicle : vehicles) {
@@ -356,7 +354,99 @@ public class UserInterface {
             }
         }
     }
+    private void processSellOrLeaseRequest() {
+        this.scanner = new Scanner(System.in);
+        System.out.println("Do you want to (1) Sell or (2) Lease a vehicle?");
+        int choice = this.scanner.nextInt();
+        this.scanner.nextLine();
+        switch (choice) {
+            case 1:
+                processSellVehicleRequest();
+                break;
+            case 2:
+                processLeaseVehicleRequest();
+                break;
+            default:
+                System.out.println("Invalid choice. Please enter 1 or 2.");
+                break;
+        }
+    }
+    public Vehicles findVehicleByVin(int vin) {
+        for (Vehicles vehicle : inventory) {
+            if (vehicle.getVin() == vin) {
+                return vehicle;
+            }
+        }
+        return null;
+    }
+    private void processLeaseVehicleRequest() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Available vehicles for lease:");
+        processAllVehiclesRequest();
+        System.out.println("Enter the VIN of the vehicle you want to lease: ");
+        int vinToLease = scanner.nextInt();
+        scanner.nextLine();
+        Vehicles vehicleToLease = findVehicleByVin(vinToLease);
+        if (vehicleToLease != null) {
+            System.out.println("Enter the day of the lease (YYYY-MM-DD): ");
+            String dayOfLease = scanner.nextLine();
+            System.out.println("Enter customer name: ");
+            String customerName = scanner.nextLine();
+            System.out.println("Enter customer email: ");
+            String customerEmail = scanner.nextLine();
+
+            LeaseContract leaseContract = new LeaseContract(vehicleToLease.getVin(), vehicleToLease.getYear(), vehicleToLease.getMake(), vehicleToLease.getModel(), vehicleToLease.getVehicleType(), vehicleToLease.getColor(), vehicleToLease.getOdometer(), vehicleToLease.getPrice(), dayOfLease, customerName, customerEmail, vehicleToLease, 0,0 );
+            System.out.println("Lease Contract Details:");
+            System.out.println("Total Price: $" + leaseContract.getTotalPrice());
+            System.out.println("Monthly Payment: $" + leaseContract.getMonthlyPayment());
+            System.out.println(leaseContract);
+            inventory.remove(vehicleToLease);
+            DealershipFileManager.saveVehicleToFile(inventory);
+            List<LeaseContract> leaseContractsList = new ArrayList<>();
+            leaseContractsList.add(leaseContract);
+            ContractFileManager.saveContractsToFile(leaseContractsList, "src/main/resources/Contracts.csv", true);
+            DealershipFileManager.removeVehicleFromInventory(vehicleToLease);
+            System.out.println("Vehicle leased successfully!");
+        } else {
+            System.out.println("No vehicle found with the provided VIN. Lease unsuccessful.");
+        }
+    }
+    private void processSellVehicleRequest() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Available vehicles for sell:");
+        processAllVehiclesRequest();
+        System.out.println("Enter the VIN of the vehicle to sell:");
+        int vinToSell = scanner.nextInt();
+        scanner.nextLine();
+        Vehicles vehicleToSell = findVehicleByVin(vinToSell);
+
+        if (vehicleToSell != null) {
+            System.out.println("Enter the day of the sale (YYYY-MM-DD):");
+            String dayOfSale = scanner.nextLine();
+            System.out.println("Enter the name of the customer:");
+            String customerName = scanner.nextLine();
+            System.out.println("Enter the email of the customer:");
+            String customerEmail = scanner.nextLine();
+            String contractsFilePath = "src/main/resources/Contracts.csv";
+            SalesContract salesContract = new SalesContract(
+                    vehicleToSell.getVin(),
+                    vehicleToSell.getYear(),
+                    vehicleToSell.getMake(),
+                    vehicleToSell.getModel(),
+                    vehicleToSell.getVehicleType(),
+                    vehicleToSell.getColor(),
+                    vehicleToSell.getOdometer(),
+                    vehicleToSell.getPrice(),
+                    dayOfSale,
+                    customerName,
+                    customerEmail);
+            List<SalesContract> salesContractsList = new ArrayList<>();
+            salesContractsList.add(salesContract);
+            ContractFileManager.saveContractsToFile(salesContractsList, contractsFilePath, true);
+            inventory.remove(vehicleToSell);
+            System.out.println("Vehicle sold successfully!");
+        } else {
+            System.out.println("No vehicle found with the provided VIN. Sale unsuccessful.");
+        }
+    }
 }
-
-
-

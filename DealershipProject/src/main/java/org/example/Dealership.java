@@ -111,11 +111,13 @@ public class Dealership {
     public void addVehicle(Vehicles vehicle) {
         inventory.add(vehicle);
         DealershipFileManager manager = new DealershipFileManager();
-        manager.saveVehicleToFile(vehicle);
+        manager.saveVehicleToFile(inventory);
     }
+
     public void removeVehicle(Vehicles vehicle) {
         inventory.remove(vehicle);
         DealershipFileManager manager = new DealershipFileManager();
-        manager.removeVehicleFromFile(vehicle.getVin());
+        manager.saveVehicleToFile(inventory);
     }
+
 }
