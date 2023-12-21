@@ -1,0 +1,12 @@
+DATE|TIME|DESCRIPTION|VENDOR|AMOUNT
+At 2023-10-24| 11:49:46|deposit |steeven| 15000.00
+At 2023-10-24| 11:49:56|payment |AT&T| -150.00
+At 2023-10-24| 11:50:00|payment |hulu| -10.00
+At 2023-10-24| 12:09:45|deposit |steeven| 289.00
+At 2023-10-24| 12:09:55|payment |gas| -45.00
+At 2023-10-24| 12:14:21|deposit |steeven| 12.00
+At 2023-10-24| 12:15:25|deposit |l| 12.00
+At 2023-10-24| 12:17:49|deposit |l| 78.00
+At 2023-10-24| 12:22:33|deposit |s| 233.00
+
+At 2023-12-20 17:57:56 |steeven| 299.00

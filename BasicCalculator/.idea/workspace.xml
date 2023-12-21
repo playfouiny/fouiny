@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="2a4b01b2-eba4-482a-ad5a-77e823a5aaba" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/Contract.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/Contracts.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/Contract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/ContractFileManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/Dealership.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/DealershipFileManager.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/LeaseContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/Program.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/SalesContract.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/UserInterface.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/java/org/example/Vehicles.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/resources/Contracts.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../DealershipProject/src/main/resources/Inventory.csv" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Neighborhood-Library/src/main/java/org/example/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Neighborhood-Library/src/main/java/org/example/Main.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../VehicleInventory1/src/main/java/org/example/Vehicle.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/src/main/java/org/example/calculator2.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week1Project/src/main/java/org/example/calculator3.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/.idea/vcs.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/src/main/java/org/example/Book.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week2ProjectNeighborhoodLibrary/src/main/java/org/example/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Week3Project/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warmup/MondayWarmUpWeek6/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../warmup/MondayWarmUpWeek6/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warmup/ThursdayWarmUpweek7/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../warmup/ThursdayWarmUpweek7/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../warmup/TuesdayWarmUpWeek7/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../warmup/TuesdayWarmUpWeek7/pom.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2WJSFYfrT6KRPLmYVHD18fA9OZX" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/Users/steevenirakoze/Desktop/LearnToCode/fouiny/BasicCalculator"
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="2a4b01b2-eba4-482a-ad5a-77e823a5aaba" name="Changes" comment="" />
+      <created>1696449091238</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1696449091238</updated>
+    </task>
+    <servers />
+  </component>
+</project>
